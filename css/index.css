@@ -5,7 +5,7 @@
 }
 body{
     font-family: sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5{
     font-weight:normal !important;
@@ -126,6 +126,9 @@ p.text{
 }
 .right-section{
     width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .discount-content{
     display: flex;
@@ -147,43 +150,82 @@ p.text{
 }
 .right-section button:last-child{
     position: relative;
-    top: -150px;
-    left: 45px;
+    top: -225px;
+    left: -76px;
 }
-.dots{
+  .dots {
+    position: relative;
+    top: -220px;
+    left: -88px;
+    padding: 24px 0 32px 0;
     display: flex;
-    justify-content: center;
-    width: 16vw;
-}
-.dot {
-    margin-left: 20px;
+  }
+  .dots .dot {    
+    margin-left: 18px;
 }
 .yellow-dot{
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     background-color: #ffff00;
     border-radius: 50%;
     z-index: 9;
-    margin-top: -215px;
 }
 
 .tomato-dot{
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     background-color: #fe5e35;
     border-radius: 50%;
     z-index: 9;
-    margin-top: -215px;
 }
 
 .black-dot{
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     background-color: #000000;
     border-radius: 50%;
     z-index: 9;
-    margin-top: -215px;
 }
+nav .fa-bars {
+    display: none;
+  }
+@media only screen and (max-width: 1024px) {
+    .nav-items {
+      display: none;
+    }
+    .intro-section {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      padding: 32px;
+    }
+    .right-section,
+    .left-section {
+      width: 100vw;
+    }
+    .left-section{
+        margin-top: -120px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    nav .fa-bars {
+      display: block;
+    }
+    nav img[alt='actions'] {
+      display: none;
+    }
+    .left-section h1 {
+      font-size: 48px;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .left-section h1 {
+      font-size: 36px;
+    }
+    .intro-section{
+        margin-left: 100px;
+    }
+  }
 
 
 
